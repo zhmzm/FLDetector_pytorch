@@ -1,0 +1,26 @@
+======================================
+    IID: 0
+    Dataset: cifar
+    Model: VGG
+    Model Init: None
+    Aggregation Function: avg
+    Attack method: adaptive
+    Attack mode: 10
+    Attack tau: 0.8
+    Fraction of malicious agents: 10.0%
+    Poison Frac: 1.0
+    Backdoor From -1 to 5
+    Attack Begin: 0
+    Trigger Shape: square
+    Trigger Position X: 27
+    Trigger Position Y: 27
+    Number of agents: 100
+    Fraction of agents each turn: 10(10.0%)
+    Local batch size: 64
+    Local epoch: 2
+    Client_LR: 0.1
+    Client_Momentum: 0.9
+    Global Rounds: 200
+======================================
+main_task_accuracy=[0.0001, 10.0, 10.0, 10.0, 15.25, 16.170000076293945, 12.600000381469727]
+backdoor_accuracy=[0, 100.0, 0.0, 0.0, 0.0, 0.0, 0.0]

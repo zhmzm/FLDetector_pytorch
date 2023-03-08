@@ -1,0 +1,17 @@
+======================================
+    IID: 1
+    Dataset: cifar
+    Model: resnet
+    Model Init: None
+    Aggregation Function: fld
+    -----No Attack-----
+    Number of agents: 100
+    Fraction of agents each turn: 100(100%)
+    Local batch size: 50
+    Local epoch: 3
+    Client_LR: 0.01
+    Client_Momentum: 0.9
+    Global Rounds: 500
+======================================
+main_task_accuracy=[0.0001, 10.390000343322754, 29.579999923706055, 41.40999984741211, 43.209999084472656, 48.61000061035156, 51.11000061035156, 54.81999969482422, 56.63999938964844, 57.869998931884766]
+backdoor_accuracy=[0, 0.0, 11.5, 19.8, 13.6, 13.2, 9.6, 10.1, 9.1, 5.7]

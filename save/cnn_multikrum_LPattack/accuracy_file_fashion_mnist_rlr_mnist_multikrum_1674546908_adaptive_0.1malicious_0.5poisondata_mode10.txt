@@ -1,0 +1,29 @@
+======================================
+    IID: 1
+    Dataset: fashion_mnist
+    Model: rlr_mnist
+    Model Init: None
+    Aggregation Function: multikrum
+    Attack method: adaptive
+    Attack mode: 10
+    Attack tau: 0.8
+    Fraction of malicious agents: 10.0%
+    Poison Frac: 0.5
+    Backdoor From -1 to 5
+    Attack Begin: 0
+    Trigger Shape: square
+    Trigger Position X: 23
+    Trigger Position Y: 23
+    Number of agents: 100
+    Fraction of agents each turn: 10(10.0%)
+    Local batch size: 64
+    Local epoch: 2
+    Client_LR: 0.01
+    Client_Momentum: 0.9
+    Global Rounds: 200
+proportion of malicious are selected:0.2
+    Average score of malicious clients: 2.815392017364502
+    Average score of benign clients: 1.0735679864883423
+======================================
+main_task_accuracy=[0.0001, 60.689998626708984]
+backdoor_accuracy=[0, 0.011111111111111112]
