@@ -1,5 +1,9 @@
 # FLDetector_pytorch
-Unofficial implementation for paper FLDetector: Defending Federated Learning Against Model Poisoning Attacks via Detecting Malicious Clients (KDD2022). Please let me know if there is any problem.
+Unofficial implementation for paper FLDetector: Defending Federated Learning Against Model Poisoning Attacks via Detecting Malicious Clients (KDD2022). Official implementation is [here](https://github.com/zaixizhang/FLDetector) with MXNet framework. 
+
+The code cannot work well with local SGD updates. So run this code with local epoch set to 1 (local_ep = 1) and local batch size set to the same nember of samples in local dataset (local_bs = 500, 600). 
+
+The results in this version are a bit different with the results reported in the original paper, especially in Non-iid settings. Please use it discriminately and let me know if there is any problem.
 
 paper FLDetector: Defending Federated Learning Against Model Poisoning Attacks via Detecting Malicious Clients is from [KDD2022](https://dl.acm.org/doi/abs/10.1145/3534678.3539231)
 
@@ -34,8 +38,8 @@ python main_fed.py      --dataset cifar,fashion_mnist \
                         --lr 0.1 \
                         --malicious 0.1 \
                         --poison_frac 1.0 \
-                        --local_ep 2 \
-                        --local_bs 64 \
+                        --local_ep 1 \
+                        --local_bs 500, 600 \
                         --attack_begin 0 \
                         --defence avg, fldetector, fltrust, flame, krum, RLR \
                         --epochs 200 \
