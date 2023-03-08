@@ -3,11 +3,18 @@ Unofficial implementation for paper FLDetector: Defending Federated Learning Aga
 
 The code cannot work well with local SGD updates. So run this code with local epoch set to 1 (local_ep = 1) and local batch size set to the same nember of samples in local dataset (local_bs = 500, 600). 
 
-The results in this version are a bit different with the results reported in the original paper, especially in Non-iid settings. Please use it discriminately and let me know if there is any problem.
-
 paper FLDetector: Defending Federated Learning Against Model Poisoning Attacks via Detecting Malicious Clients is from [KDD2022](https://dl.acm.org/doi/abs/10.1145/3534678.3539231)
 
-Please contact me if you have any difficulty to run the code in issue.
+Feel free to contact me if you have any difficulty to run the code in issue.
+
+# Results
+The results in this version are a bit different with the results reported in the original paper, especially in Non-iid settings. Please use it discriminately and let me know if there is any problem. Here ASR indicates attack success rate also called backdoor success rate, and Acc indicates accuracy of the main tasks.
+|Dataset|Model|Attack|Defence|ASR|Acc|iid|
+|  ---- |  ----  |  ----  |  ----  |  ----  | ----  | ---- |
+|CIFAR-10|ResNet18|Badnet|No Defence|70.2|80.38|IID|
+|CIFAR-10|ResNet18|Badnet|FLDector|4.43|68.54|IID|
+|CIFAR-10|ResNet18|Badnet|No Defence|70.53|77.58|Non-IID|
+|CIFAR-10|ResNet18|Badnet|FLDector|5.21|64.39|Non-IID|
 
 # Requirement
 Python=3.9
@@ -33,8 +40,9 @@ VGG and ResNet18 can only be trained on CIFAR-10 dataset, while CNN can only be 
 
 Quick start:
 ```
-python main_fed.py --defence fld --model resnet --dataset cifar --local_ep 1 --local_bs 500 --attack badnet --triggerX 27 --triggerY 27
+python main_fed.py --defence fld --model resnet --dataset cifar --local_ep 1 --local_bs 500 --attack badnet --triggerX 27 --triggerY 27 --epochs 500
 ```
+It costs more than 10 GPU hours to run this program.
 
 Detailed settings:
 
