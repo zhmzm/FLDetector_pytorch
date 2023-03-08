@@ -30,7 +30,8 @@ Install instruction are recorded in install_requirements.sh
 
 # Run
 VGG and ResNet18 can only be trained on CIFAR-10 dataset, while CNN can only be trained on fashion-MNIST dataset.
-quick start:
+
+Quick start:
 ```
 python main_fed.py --defence fld --model resnet --dataset cifar --local_ep 1 --local_bs 500 --attack badnet --triggerX 27 --triggerY 27
 ```
