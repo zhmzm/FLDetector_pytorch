@@ -170,6 +170,7 @@ def attacker(list_mal_client, num_mal, attack_type, dataset_train, dataset_test,
         idx = args.dba_sign % (4 * dba_group)
         args.dba_sign += 1
     local = LocalMaliciousUpdate(args=args, dataset=dataset_train, idxs=dict_users[idx], order=idx, dataset_test=dataset_test)
+    w, loss = local.train(net=copy.deepcopy(net_glob).to(args.device), test_img=test_img)
     print("client", idx, "--attack--")
     if num_mal_temp>0:
         temp_w = [w for i in range(num_mal_temp)]
