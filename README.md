@@ -40,7 +40,7 @@ VGG and ResNet18 can only be trained on CIFAR-10 dataset, while CNN can only be 
 
 Quick start:
 ```
-python main_fed.py --defence fld --model resnet --dataset cifar --local_ep 1 --local_bs 500 --attack badnet --triggerX 23 --triggerY 23 --epochs 500 --poison_frac 0.5
+python main_fed.py --defence fld --model resnet --dataset cifar --local_ep 1 --local_bs 500 --attack badnet --triggerX 27 --triggerY 27 --epochs 500 --poison_frac 0.5
 ```
 It costs more than 10 GPU hours to run this program.
 
