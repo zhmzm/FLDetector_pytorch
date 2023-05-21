@@ -157,9 +157,6 @@ def cos_param(p1,p2):
 
 def attacker(list_mal_client, num_mal, attack_type, dataset_train, dataset_test, dict_users, net_glob, args, idx=None):
     num_mal_temp=0
-    if args.defence == 'fld':
-        args.old_update = args.old_update_list[idx]
-        
     if idx == None:
         idx = random.choice(list_mal_client)
     w, loss, args.attack_layers = None, None, None
