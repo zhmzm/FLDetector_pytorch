@@ -19,7 +19,7 @@ def args_parser():
                         default=100, help="number of users: K")
     parser.add_argument('--frac', type=float, default=0.1,
                         help="the fraction of clients: C")
-    parser.add_argument('--malicious',type=float,default=0, help="proportion of mailicious clients")
+    parser.add_argument('--malicious',type=float,default=0.1, help="proportion of mailicious clients")
     
     #***** badnet labelflip layerattack updateflip get_weight layerattack_rev layerattack_ER adaptive****
     parser.add_argument('--attack', type=str,
