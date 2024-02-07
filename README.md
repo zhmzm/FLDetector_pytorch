@@ -1,11 +1,15 @@
 # FLDetector_pytorch
-Unofficial implementation for paper FLDetector: Defending Federated Learning Against Model Poisoning Attacks via Detecting Malicious Clients (KDD2022). Official implementation is [here](https://github.com/zaixizhang/FLDetector) with MXNet framework. 
+**Unofficial implementation** for paper FLDetector: Defending Federated Learning Against Model Poisoning Attacks via Detecting Malicious Clients (KDD2022). Official implementation is [here](https://github.com/zaixizhang/FLDetector) with the MXNet framework. 
 
-The code cannot work well with local SGD updates. So run this code with local epoch set to 1 (local_ep = 1) and local batch size set to the same nember of samples in local dataset (local_bs = 500, 600). 
+The code cannot work well with local SGD updates. So run this code with local epoch set to 1 (local_ep = 1) and local batch size set to the same number of samples in local dataset (local_bs = 500, 600). 
 
 paper FLDetector: Defending Federated Learning Against Model Poisoning Attacks via Detecting Malicious Clients is from [KDD2022](https://dl.acm.org/doi/abs/10.1145/3534678.3539231)
 
-Feel free to contact me if you have any difficulty to run the code in issue.
+Feel free to contact me if you have any difficulty running the code in the issue.
+
+# Backdoor in FL
+
+**Our recent paper "Backdoor Federated Learning by Poisoning Backdoor-critical Layers" has been accepted in ICLR'24, please refer to the [Github repo](https://github.com/zhmzm/Poisoning_Backdoor-critical_Layers_Attack).**
 
 # Results
 The results in this version are a bit different with the results reported in the original paper, especially in Non-iid settings. Please use it discriminately and let me know if there is any problem. Here ASR indicates attack success rate also called backdoor success rate, and Acc indicates accuracy of the main tasks.
@@ -33,10 +37,10 @@ hdbscan=0.8.28
 
 jupyterlab=3.3.2
 
-Install instruction are recorded in install_requirements.sh
+Install instructions are recorded in install_requirements.sh
 
 # Run
-VGG and ResNet18 can only be trained on CIFAR-10 dataset, while CNN can only be trained on fashion-MNIST dataset.
+VGG and ResNet18 can only be trained on CIFAR-10 dataset, while CNN can only be trained on the fashion-MNIST dataset.
 
 Quick start:
 ```
